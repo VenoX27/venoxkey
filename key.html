@@ -6,12 +6,12 @@
 <label">Key Generated Successfully</label>
 </body>
 <?php
-    $conn = mysql_connect("remotemysql.com","Nlz4nhoNXV","UY8fdYgUiL");
+    $conn = mysql_connect("remotemysql","Nlz4nhoNXV","UY8fdYgUiL");
     $db      = mysql_select_db("databasename",$conn);
 ?>
 <?php
     $name       =      $_POST['user'];
-    $sql     = "INSERT into vkey values('$name')";
+    $sql     = "INSERT into ukey values('$name')";
     $qury  = mysql_query($sql);
     if(!$qury)
         echo mysql_error();
